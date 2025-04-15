@@ -1,172 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Métodos de Array em JavaScript</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .container {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            color: #000;
-        }
-        code {
-            background: #e3e3e3;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #000;
-        }
-        pre {
-            background: #e3e3e3;
-            color: #000;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos de Array em JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .container {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      color: #000;
+    }
+    code {
+      background: #e3e3e3;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #000;
+    }
+    pre {
+      background: #e3e3e3;
+      color: #000;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Array <code>length</code> em JavaScript</h1>
-        <p>A propriedade <code>length</code> em arrays é usada para determinar o número de elementos presentes em um array. Em outras palavras, ela retorna o tamanho do array.</p>
+  <div class="container">
 
-        <h2>Sintaxe:</h2>
-        <pre><code>array.length</code></pre>
+    <h1>Array <code>length</code></h1>
+    <p>A propriedade length em arrays é usada para determinar o número de elementos presentes em um array. Em outras palavras, ela retorna o tamanho do array. A sintaxe é bastante simples: basta acessar essa propriedade pelo nome do array seguido de .length.</p>
+    <h2>Sintaxe:</h2>
+    <pre><code>array.length</code></pre>
+    <h2>Exemplos:</h2>
+    <pre><code>const frutas = ["maçã", "banana", "laranja"];
+console.log(frutas.length); // Saída: 3
 
-        <h2>Exemplos:</h2>
-        <h3>Exemplo 1: Verificando o tamanho de um array simples</h3>
-        <pre><code>const frutas = ["maçã", "banana", "laranja"];
-console.log(frutas.length); // Saída: 3</code></pre>
-
-        <h3>Exemplo 2: Usando length em um array vazio</h3>
-        <pre><code>const vazio = [];
+const vazio = [];
 console.log(vazio.length); // Saída: 0</code></pre>
 
-        <hr>
+    <hr>
 
-        <h1>Método <code>toString()</code> em JavaScript</h1>
-        <p>O método <code>toString()</code> de um array converte todos os elementos do array em uma string, separados por vírgulas. Ele é útil quando se deseja apresentar os dados do array como texto.</p>
-
-        <h2>Sintaxe:</h2>
-        <pre><code>array.toString()</code></pre>
-
-        <h2>Exemplos:</h2>
-        <h3>Exemplo 1: Convertendo um array de números para string</h3>
-        <pre><code>const numeros = [1, 2, 3, 4, 5];
+    <h1>Método <code>toString()</code></h1>
+    <p>A função toString() de um array em JavaScript converte todos os elementos do array em uma string, separados por vírgulas. Essa função é útil quando você quer apresentar os dados de um array como texto.</p>
+    <h2>Sintaxe:</h2>
+    <pre><code>array.toString()</code></pre>
+    <h2>Exemplos:</h2>
+    <pre><code>const numeros = [1, 2, 3, 4, 5];
 const texto = numeros.toString();
-console.log(texto); // Saída: "1,2,3,4,5"</code></pre>
+console.log(texto); // Saída: "1,2,3,4,5"
 
-        <h3>Exemplo 2: Array com tipos mistos</h3>
-        <pre><code>const misto = ["maçã", 42, true, null];
+const misto = ["maçã", 42, true, null];
 const textoMisto = misto.toString();
 console.log(textoMisto); // Saída: "maçã,42,true,"</code></pre>
 
-        <hr>
+    <hr>
 
-        <h1>Método <code>at()</code> em JavaScript</h1>
-        <p>O método <code>at()</code> permite acessar elementos de um array ou string utilizando índices positivos ou negativos.</p>
-
-        <h2>Sintaxe:</h2>
-        <pre><code>array.at(índice)</code></pre>
-
-        <h2>Exemplos com Arrays:</h2>
-        <pre><code>const frutas = ['maçã', 'banana', 'laranja', 'uva'];
+    <h1>Método <code>at()</code></h1>
+    <p>É uma forma de acessarmos elementos no array ou string, utilizando índices positivos ou negativos.</p>
+    <h2>Sintaxe:</h2>
+    <pre><code>array.at(índice)</code></pre>
+    <h2>Exemplos:</h2>
+    <pre><code>const frutas = ['maçã', 'banana', 'laranja', 'uva'];
 
 console.log(frutas.at(1));    // 'banana'
 console.log(frutas.at(-1));   // 'uva'
 console.log(frutas.at(-2));   // 'laranja'
-console.log(frutas.at(10));   // undefined</code></pre>
+console.log(frutas.at(10));   // undefined
 
-        <h2>Exemplos com Strings:</h2>
-        <pre><code>const texto = "JavaScript";
-
+const texto = "JavaScript";
 console.log(texto.at(-1));  // 't'
-console.log(texto.at(3));   // 'a'</code></pre>
+console.log(texto.at(3));   // 'a'
 
-        <h2>Comparação com forma tradicional:</h2>
-        <pre><code>const array = [10, 20, 30, 40, 50];
-const ultimo = array[array.length - 1]; // 50</code></pre>
+// Comparação tradicional
+const array = [10, 20, 30, 40, 50];
+const ultimo = array[array.length - 1]; // 50
+const ultimoComAt = array.at(-1); // 50
 
-        <p>Com <code>at()</code>, fica mais simples:</p>
-        <pre><code>const ultimo = array.at(-1); // 50</code></pre>
+// Curiosidade
+const letras = ['a', 'b', 'c', 'd'];
+console.log(letras[-1]); // undefined</code></pre>
 
-        <h2>Curiosidade:</h2>
-        <p>Usar colchetes <code>[]</code> com índice negativo não funciona:</p>
-        <pre><code>const array = ['a', 'b', 'c', 'd'];
-console.log(array[-1]); // undefined
-console.log(array[-2]); // undefined</code></pre>
+    <hr>
 
-        <hr>
-
-        <h1>Método <code>join()</code> em JavaScript</h1>
-        <p>O método <code>join()</code> transforma os elementos de um array em uma única string, separados por um delimitador especificado.</p>
-
-        <h2>Sintaxe</h2>
-        <pre><code>array.join(separador);</code></pre>
-
-        <h2>Exemplos</h2>
-        <pre><code>let frutas = ["Maçã", "Banana", "Laranja"];
+    <h1>Método <code>join()</code></h1>
+    <p>O método join() transforma todos os elementos de um array em uma única string. Por padrão, os elementos são separados por vírgulas, mas é possível escolher outro separador.</p>
+    <h2>Sintaxe:</h2>
+    <pre><code>array.join(separador)</code></pre>
+    <h2>Exemplos:</h2>
+    <pre><code>let frutas = ["Maçã", "Banana", "Laranja"];
 console.log(frutas.join());       // "Maçã,Banana,Laranja"
 console.log(frutas.join(" - "));  // "Maçã - Banana - Laranja"</code></pre>
 
-        <hr>
+    <hr>
 
-        <h1>Método <code>pop()</code> em JavaScript</h1>
-        <p>O método <code>pop()</code> remove o último item de um array e retorna esse item.</p>
+    <h1>Método <code>pop()</code></h1>
+    <p>O método pop() é uma função em JavaScript usada em arrays (que são listas de elementos, como números, strings, objetos, etc.). Ele tem uma função muito simples: remover o último item de um array e retornar esse item.</p>
+    <h2>Como funciona?</h2>
+    <ol>
+      <li>Você começa com um array de frutas: ["Maçã", "Banana", "Laranja"]</li>
+      <li>Ao chamar frutas.pop(), o método remove o último item do array, que é "Laranja".</li>
+      <li>O método pop() retorna "Laranja", então você pode usar esse valor ou armazená-lo em uma variável.</li>
+      <li>Após o pop(), o array original agora é: ["Maçã", "Banana"]</li>
+    </ol>
+    <h2>Características:</h2>
+    <ul>
+      <li>Modifica o array original.</li>
+      <li>Retorna o item removido.</li>
+      <li>Remove sempre o último item.</li>
+    </ul>
+    <h2>Exemplo:</h2>
+    <pre><code>let frutas = ["Maçã", "Banana", "Laranja"];
+let ultima = frutas.pop();
+console.log(ultima); // "Laranja"
+console.log(frutas); // ["Maçã", "Banana"]</code></pre>
 
-        <h2>Exemplo:</h2>
-        <pre><code>let frutas = ["Maçã", "Banana", "Laranja"];
-let ultimaFruta = frutas.pop();
-console.log(ultimaFruta); // "Laranja"
-console.log(frutas);      // ["Maçã", "Banana"]</code></pre>
+    <hr>
 
-        <h2>Resumo:</h2>
-        <ul>
-            <li>Modifica o array original.</li>
-            <li>Retorna o item removido.</li>
-            <li>Remove apenas o último item.</li>
-        </ul>
-
-        <hr>
-
-        <h1>Método <code>push()</code> em JavaScript</h1>
-        <p>O método <code>push()</code> é usado para adicionar um ou mais elementos ao final de um array. Ele também retorna o novo comprimento (tamanho) do array após a adição.</p>
-
-        <h2>Sintaxe:</h2>
-        <pre><code>array.push(elemento1, elemento2, ...);</code></pre>
-
-        <h2>Exemplos:</h2>
-        <h3>Adicionando um item ao final de um array</h3>
-        <pre><code>let frutas = ["Maçã", "Banana"];
+    <h1>Método <code>push()</code></h1>
+    <p>O método push() é usado para adicionar um ou mais elementos ao final de um array. Ele também retorna o novo comprimento do array após a adição.</p>
+    <h2>Sintaxe:</h2>
+    <pre><code>array.push(elemento1, elemento2, ...)</code></pre>
+    <h2>Exemplos:</h2>
+    <pre><code>let frutas = ["Maçã", "Banana"];
 frutas.push("Laranja");
-console.log(frutas); // ["Maçã", "Banana", "Laranja"]</code></pre>
+console.log(frutas); // ["Maçã", "Banana", "Laranja"]
 
-        <h3>Adicionando múltiplos itens</h3>
-        <pre><code>let numeros = [1, 2, 3];
+let numeros = [1, 2, 3];
 numeros.push(4, 5);
-console.log(numeros); // [1, 2, 3, 4, 5]</code></pre>
+console.log(numeros); // [1, 2, 3, 4, 5]
 
-        <h3>Verificando o novo tamanho do array</h3>
-        <pre><code>let letras = ["a", "b"];
+let letras = ["a", "b"];
 let novoTamanho = letras.push("c");
 console.log(novoTamanho); // 3
 console.log(letras); // ["a", "b", "c"]</code></pre>
 
-        <h2>Resumo:</h2>
-        <ul>
-            <li>Adiciona elementos ao final do array.</li>
-            <li>Modifica o array original.</li>
-            <li>Retorna o novo comprimento do array.</li>
-        </ul>
-    </div>
+    <h2>Resumo:</h2>
+    <ul>
+      <li>Adiciona elementos ao final do array.</li>
+      <li>Modifica o array original.</li>
+      <li>Retorna o novo comprimento do array.</li>
+    </ul>
+
+    <footer>
+      Trabalho desenvolvido por: Ruan, Airton, Alessandra, Edilson e André.
+    </footer>
+  </div>
 </body>
 </html>
